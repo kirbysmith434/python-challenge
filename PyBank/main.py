@@ -1,7 +1,6 @@
 import os
 import csv
 
-csvpath = os.path.join("Resources", "budget_data.csv")
 total_months = 0
 net_total = 0
 average_change = 0
@@ -11,6 +10,15 @@ previous_profit_loss = None
 max_increase_date = ''
 max_decrease_date = ''
 total_change = 0
+
+
+#get the current working directory
+current_directory = os.getcwd()
+
+
+#relative path to the CSV file
+csvpath = os.path.join("Resources", "budget_data.csv")
+
 
 with open(csvpath) as csvfile:
     # csv reader specifies delimiter and variable that holds the contents
